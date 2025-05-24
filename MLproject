@@ -1,0 +1,13 @@
+name: mlflow_project
+
+entry_points:
+  elasticnet:
+    parameters:
+      alpha: {type: float, default: 0.5}
+      l1_ratio: {type: float, default: 0.5}
+    command: "python elasticnet.py --alpha {alpha} --l1_ratio {l1_ratio}"
+
+  knn:
+    parameters:
+      n_neighbors: {type: int, default: 5}
+    command: "python knn.py --n_neighbors {n_neighbors}"
